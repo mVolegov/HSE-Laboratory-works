@@ -18,14 +18,14 @@ namespace ConsoleApp1
             double b = 1.0;
             double step = (b - a) / K;
 
-            for (double x = 0.1; x < 1.0; x += step)
+            for (double x = a; x < b; x += step)
             {
                 // Перменные для вычисления радя Маклорена
                 // Для заданной точности Эпсилон
                 double se = 0;
                 int znak = 1;
                 double term = x;
-                
+
                 // Цикл для заданной точности Эпсилон
                 for (int k = 1; ;k++)
                 {
