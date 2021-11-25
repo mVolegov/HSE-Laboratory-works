@@ -50,6 +50,7 @@ namespace Lab4Var3modified
                 {
                     case 1:
                         /*Удаление элемента с заданным номером*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         Delete(ref arr, ref size);
                         PrintArray(arr, "Массив после удалений:");
@@ -57,6 +58,7 @@ namespace Lab4Var3modified
                         break;
                     case 2:
                         /*Добавление N элементов, начиная с номера K*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         Add(ref arr, ref size);
                         PrintArray(arr, "Массив после добавлений:");
@@ -64,6 +66,7 @@ namespace Lab4Var3modified
                         break;
                     case 3:
                         /*Циклический сдвиг на M элементов влево*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         Rearrange(ref arr, ref size);
                         PrintArray(arr, "Массив после перестановок");
@@ -71,15 +74,17 @@ namespace Lab4Var3modified
                         break;
                     case 4:
                         /*Поиск элемента с заданным ключом (значением)*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         Console.WriteLine(SequentialSearch(arr, size));
 
                         break;
                     case 5:
                         /*Сортировка простым включенем*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         InsertionSort(ref arr, ref size);
-                        PrintArray(arr, "Массив после сортировки простой вставкой");
+                        PrintArray(arr, "Массив после сортировки простой вставкой:");
 
                         /*Бинарный поиск*/
                         Console.WriteLine(BinarySearch(arr, size));
@@ -87,6 +92,7 @@ namespace Lab4Var3modified
                         break;
                     case 6:
                         /*Быстрая сортировка*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         QuickSort(ref arr, 0, size - 1);
                         PrintArray(arr, "Массив после быстрой сортировки:");
@@ -94,6 +100,7 @@ namespace Lab4Var3modified
                         break;
                     case 7:
                         /*Сортировка подсчетом*/
+                        Console.Clear();
                         PrintArray(arr, "Исходный массив:");
                         CountingSort(ref arr, ref size);
                         PrintArray(arr, "Массив после сортировки подсчетом:");
@@ -179,6 +186,14 @@ namespace Lab4Var3modified
             int elementIndexToDelete;
             bool isValidInput;
             
+            // /*Удалить*/
+            // if (size == 0)
+            // {
+            //     Console.WriteLine("Массив пустой!");
+            //     return ;
+            // }
+            // /*Удалить*/
+
             /*Ввод индекса элемента на удаление*/
             do   
             {
