@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{E1532099-9D12-4675-BAA8-1E2EB23E6FE5}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>Lab8var3</RootNamespace>
+        <AssemblyName>Lab8var3</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Deployment" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="GUI\AddForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GUI\AddForm.Designer.cs">
+          <DependentUpon>AddForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="GUI\AllGroupsForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GUI\AllGroupsForm.Designer.cs">
+          <DependentUpon>AllGroupsForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="GUI\AllGroupsFormDesc.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GUI\AllGroupsFormDesc.Designer.cs">
+          <DependentUpon>AllGroupsFormDesc.cs</DependentUpon>
+        </Compile>
+        <Compile Include="GUI\DeleteForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GUI\DeleteForm.Designer.cs">
+          <DependentUpon>DeleteForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="GUI\MainMenuForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GUI\MainMenuForm.Designer.cs">
+          <DependentUpon>MainMenuForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="GUI\UpdateInformationForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GUI\UpdateInformationForm.Designer.cs">
+          <DependentUpon>UpdateInformationForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Model\Student.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Service\Helper.cs" />
+        <EmbeddedResource Include="GUI\AddForm.resx">
+          <DependentUpon>AddForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="GUI\AllGroupsForm.resx">
+          <DependentUpon>AllGroupsForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="GUI\AllGroupsFormDesc.resx">
+          <DependentUpon>AllGroupsFormDesc.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="GUI\DeleteForm.resx">
+          <DependentUpon>DeleteForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="GUI\MainMenuForm.resx">
+          <DependentUpon>MainMenuForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="GUI\UpdateInformationForm.resx">
+          <DependentUpon>UpdateInformationForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Database\AllGroups(alphabetical_order).bin" />
+      <Content Include="Database\AllGroups(groups_desc).bin" />
+      <Content Include="Database\Group1.bin" />
+      <Content Include="Database\Group2.bin" />
+      <Content Include="Database\Group3.bin" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
